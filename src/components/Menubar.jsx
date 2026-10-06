@@ -15,10 +15,7 @@ const Menubar = ({activeMenu}) => {
 
     const navigate = useNavigate();
 
-    // const handleDropdownToggle = (event)=>{
-            
-    //         setShowDropdown(!showDropdown);
-    // }
+    
 
     const handleLogout =() =>{
         localStorage.clear();
@@ -65,26 +62,13 @@ const Menubar = ({activeMenu}) => {
            {/*Right side - Avatar photo */}
 
             <div className='relative' ref={dropDownRef}>
-                {/* <button 
+                <button 
                     onClick={() => setShowDropdown(!showDropdown)}
                     className='flex items-center-safe cursor-pointer justify-center-safe w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2'>
                     <User className='w-4 h-4 text-purple-600'/>
-                </button> */}
-
-                <button 
-                        onClick={() => setShowDropdown(!showDropdown)}
-                        className='flex items-center-safe cursor-pointer justify-center-safe w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 overflow-hidden'
-                    >
-                        {user?.profileImageUrl ? (
-                            <img
-                                src={user.profileImageUrl}
-                                alt="Profile"
-                                className="w-full h-full object-cover"
-                            />
-                        ) : (
-                            <User className='w-4 h-4 text-purple-600' />
-                        )}
                 </button>
+
+                
 
                   {/*dropdown menu*/}
                     {showDropdown && (
@@ -92,22 +76,12 @@ const Menubar = ({activeMenu}) => {
                             {/*user info*/}
                             <div className='px-4 py-2 border-b border-gray-100'>
                                 <div className='flex items-center-safe gap-3'>
-                                    {/* <div className='flex items-center-safe justify-center-safe w-8 h-8 bg-gray-100 rounded-full'>
+                                    <div className='flex items-center-safe justify-center-safe w-8 h-8 bg-gray-100 rounded-full'>
                                         <User className='w-4 h-4 text-purple-600'/>
-                                    </div> */}
-
-
-                                    <div className='flex items-center-safe justify-center-safe w-8 h-8 bg-gray-100 rounded-full overflow-hidden'>
-                                        {user?.profileImageUrl ? (
-                                            <img
-                                                src={user.profileImageUrl}
-                                                alt="Profile"
-                                                className="w-full h-full object-cover"
-                                            />
-                                        ) : (
-                                            <User className='w-4 h-4 text-purple-600' />
-                                        )}
                                     </div>
+
+
+                            
 
                                     <div className='flex-1 min-w-0'>
                                         <p className='text-sm font-medium text-gray-800 truncate'>
